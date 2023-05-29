@@ -7,6 +7,5 @@
     <color name="red_500">#f70000</color>
     <color name="red_600">#E70001</color>
     <color name="red_900">#AA0407</color>
-    <color name="background">#171417</color>
     <color name="menu_navegacao">@color/white</color>
 </resources>

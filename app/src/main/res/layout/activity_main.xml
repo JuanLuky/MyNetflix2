@@ -21,7 +21,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/capa" />
+            app:srcCompat="@drawable/capa"
+            android:contentDescription="Filme" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -33,7 +34,8 @@
             android:padding="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/textView"
@@ -160,14 +162,14 @@
             android:layout_height="50dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/button_custom"
-            android:drawableLeft="@drawable/ic_executar_24"
+            android:drawableStart="@drawable/ic_executar_24"
             android:drawablePadding="5dp"
-            android:drawableTint="@color/background"
-            android:paddingLeft="18dp"
-            android:paddingRight="15dp"
-            android:text="Play"
+            android:drawableTint="@color/black"
+            android:paddingStart="18dp"
+            android:paddingEnd="15dp"
+            android:text="@string/play_filme"
             android:textAlignment="textStart"
-            android:textColor="@color/background"
+            android:textColor="@color/black"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/button3"
             app:layout_constraintHorizontal_bias="0.5"

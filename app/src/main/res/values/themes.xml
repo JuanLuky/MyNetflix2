@@ -9,10 +9,10 @@
         <item name="colorSecondaryVariant">@color/red_500</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" >@color/black</item>
 
         <!-- customizando interface netflix -->
-        <item name="android:windowBackground">@color/background</item>
+        <item name="android:windowBackground">@color/black</item>
 
     </style>
 
