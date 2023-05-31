@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:contentDescription="@string/esse_aplicativo_tem_scroll_onde_pode_rolar_para_v_todo_conte_do"
-    tools:context=".MainActivity"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/fundo"
+            android:id="@+id/bg_filme"
             android:layout_width="0dp"
-            android:layout_height="474dp"
+            android:layout_height="460dp"
+            android:contentDescription="@string/imagem_filme"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/capa"
-            android:contentDescription="Filme" />
+            app:srcCompat="@drawable/capa" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -107,7 +107,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.554" />
+            app:layout_constraintGuide_percent="0.5506608" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.84" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -158,15 +165,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Button_player"
-            android:layout_width="125dp"
-            android:layout_height="50dp"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
             android:layout_marginTop="24dp"
             android:background="@drawable/button_custom"
             android:drawableStart="@drawable/ic_executar_24"
             android:drawablePadding="5dp"
             android:drawableTint="@color/black"
-            android:paddingStart="18dp"
-            android:paddingEnd="15dp"
+            android:paddingStart="22dp"
             android:text="@string/play_filme"
             android:textAlignment="textStart"
             android:textColor="@color/black"
@@ -217,67 +223,78 @@
             app:layout_constraintStart_toStartOf="@+id/lineLeft"
             app:layout_constraintTop_toTopOf="@+id/guideline7" />
 
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Séries"
-            android:textColor="@color/menu_navegacao"
-            app:layout_constraintStart_toStartOf="@+id/lineLeft"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="100dp"
-            android:layout_height="146dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="@string/imagem_filme"
-            app:layout_constraintEnd_toStartOf="@+id/imageView4"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="spread_inside"
-            app:layout_constraintStart_toStartOf="@id/lineLeft"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"
-            app:srcCompat="@drawable/filme1" />
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="100dp"
-            android:layout_height="146dp"
-            android:contentDescription="@string/imagem_filme"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-            app:layout_constraintEnd_toStartOf="@+id/imageView5"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/imageView3"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/filme2" />
 
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="100dp"
-            android:layout_height="146dp"
-            android:contentDescription="@string/imagem_filme"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-            app:layout_constraintEnd_toStartOf="@+id/lineRight"
-            app:layout_constraintStart_toEndOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/filme3" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/lineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="130dp"
+                    android:layout_height="185dp"
+                    android:contentDescription="@string/imagem_filme"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="@id/lineLeft"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    app:srcCompat="@drawable/filme1" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="130dp"
+                    android:layout_height="185dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/imagem_filme"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView3"
+                    app:layout_constraintTop_toTopOf="@+id/imageView3"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/filme2" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="130dp"
+                    android:layout_height="185dp"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@string/imagem_filme"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                    app:layout_constraintEnd_toStartOf="@+id/lineRight"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="@+id/imageView4"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/filme3" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="168dp"
             android:layout_height="101dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="4dp"
             android:contentDescription="@string/imagem_filme"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/imageView8"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@id/lineLeft"
-            app:layout_constraintTop_toBottomOf="@+id/textView8"
             app:srcCompat="@drawable/f1" />
 
         <ImageView
@@ -291,6 +308,16 @@
             app:layout_constraintStart_toEndOf="@+id/imageView7"
             app:layout_constraintTop_toTopOf="@+id/imageView7"
             app:srcCompat="@drawable/f3" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Séries"
+            android:textColor="@color/menu_navegacao"
+            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="@+id/lineLeft"
+            app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

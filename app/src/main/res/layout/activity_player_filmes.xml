@@ -56,7 +56,7 @@
         app:layout_constraintGuide_percent="0.09" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/capaFIlme"
         android:layout_width="match_parent"
         android:layout_height="212dp"
         android:contentDescription="@string/imagem_filme"
@@ -64,8 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:srcCompat="@drawable/capa" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
@@ -75,8 +74,8 @@
         android:contentDescription="Voltar para tela inicial"
         android:drawableStart="@drawable/play_circle_outline"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView9"
-        app:layout_constraintEnd_toEndOf="@+id/imageView9"
+        app:layout_constraintBottom_toBottomOf="@+id/capaFIlme"
+        app:layout_constraintEnd_toEndOf="@+id/capaFIlme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
@@ -95,12 +94,12 @@
         app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/nome_filme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
-        android:text="Peaky Blinders"
+        android:text="Teste"
         android:textColor="@color/menu_navegacao"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -115,8 +114,8 @@
         android:text="2013"
         android:textColor="@color/gray_500"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintStart_toStartOf="@+id/nome_filme"
+        app:layout_constraintTop_toBottomOf="@+id/nome_filme" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -126,7 +125,7 @@
         android:layout_marginTop="16dp"
         android:contentDescription="@string/logo_da_netflix"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/capaFIlme"
         app:srcCompat="@drawable/ic_launcher2" />
 
     <TextView
@@ -159,44 +158,48 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button4"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_custom"
         android:drawableStart="@drawable/ic_executar_24"
-        android:drawablePadding="-130dp"
+        android:drawablePadding="-50dp"
         android:drawableTint="#000000"
         android:includeFontPadding="true"
         android:padding="5dp"
-        android:paddingStart="130dp"
+        android:paddingStart="125dp"
+        android:paddingEnd="80dp"
         android:text="Assistir"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        tools:ignore="VisualLintButtonSize" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button5"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/button_custom"
 
         android:backgroundTint="#353535"
         android:drawableStart="@drawable/baseline_download"
-        android:drawablePadding="-130dp"
+        android:drawablePadding="-50dp"
         android:padding="5dp"
-        android:paddingStart="130dp"
+        android:paddingStart="125dp"
+        android:paddingEnd="80dp"
         android:text="Baixar"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        tools:ignore="VisualLintButtonSize" />
 
     <TextView
         android:id="@+id/textView14"
@@ -205,12 +208,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:text="Uma notória gangue da Inglaterra de 1919 ascende no submundo liderada pelo cruel Tommy Shelby, um criminoso disposto a subir na vida a qualquer preço."
+        android:text="@string/descrição"
         android:textColor="@color/menu_navegacao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:ignore="VisualLintLongText" />
 
     <TextView
         android:id="@+id/textView15"
@@ -219,7 +223,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="Gêneros: Ficção histórica, Drama, Crime, Suspense psicológico"
+        android:text="@string/generos"
         android:textColor="@color/gray_500"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

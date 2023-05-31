@@ -1,20 +1,26 @@
 package com.juanluky.mynetflix
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import com.juanluky.mynetflix.databinding.ActivityPlayerFilmesBinding
 
 class PlayerFilmesActivity : AppCompatActivity() {
 
-    lateinit var buttonClose: Button
+    private lateinit var binding: ActivityPlayerFilmesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_player_filmes)
+        binding = ActivityPlayerFilmesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        buttonClose = findViewById( R.id.Button_close)
-        buttonClose.setOnClickListener {
+        val dados = intent.extras
+        var namesFilme = dados?.getString("player")
+        var imgFilme = dados?.getInt("imagem")
+
+        binding.nomeFilme.text = (namesFilme)
+        binding.capaFIlme.setImageResource(imgFilme!!)
+
+        binding.ButtonClose.setOnClickListener {
             finish()
         }
     }

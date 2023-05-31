@@ -4,4 +4,6 @@
     <string name="imagem_filme">imagem filme</string>
     <string name="logo_da_netflix">Logo da Netflix</string>
     <string name="play_filme">Play</string>
+    <string name="descrição">Uma notória gangue da Inglaterra de 1919 ascende no submundo liderada pelo cruel Tommy Shelby, um criminoso disposto a subir na vida a qualquer preço.</string>
+    <string name="generos">Gêneros: Ficção histórica, Drama, Crime, Suspense psicológico</string>
 </resources>
